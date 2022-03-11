@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTH 8" />
+    <title>Tip_calculator</title>
+    <link rel="stylesheet" href="/tipcalculator.css" />
+    <script src="./java.js"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        class="center"
+        src="/chef-cooking-food-illustration-chef-food-design-6dc20e4abbbe5f032e7927c485f17e97.png"
+        alt="restaurant_logo"
+      />
+      <h1>DWARAKA RESTAURANT</h1>
+    </header>
+    <form method="GET">
+      <table class="size">
+        <tr>
+          <th class="row1">Invoice_No:234</th>
+          <th colspan="2">DWARAKA RESTAURANT</th>
+          <th>Date: 26/01/2022</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            Payer_Name:<br /><input
+              class="font"
+              type="text"
+              name="Payer_name"
+            />
+          </td>
+          <td colspan="3">
+            Adderss:<br />
+            <textarea class="font"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <th class="row1">sl_no</th>
+          <th class="row2">Items_list</th>
+          <th>Qty.</th>
+          <th colspan="">price</th>
+        </tr>
+        <tr>
+          <td class="row1">1.</td>
+          <td>
+            <input oninput="my_value1()" id="item1"class="font" list="food_items" name="food" />
+            <datalist id="food_items">
+              <option value="Birayani" />
+              <option value="Full Meals" />
+              <option value="Egg Rice" />
+            </datalist>
+          </td>
+          <td>
+            <input id="qty1" class="font" oninput="my_value1()" oninput="total()" type="text" name="itm_qty" />
+          </td>
+          <td><label for="input" id="price1"></label></td>
+        </tr>
+        <tr>
+          <td class="row1">2.</td>
+          <td>
+            <input oninput="my_value2()" id="item2" class="font" list="food_items" name="food1" />
+            <datalist id="food_items">
+              <option value="Birayani" />
+              <option value="Full Meals" />
+              <option value="Egg Rice" />
+            </datalist>
+          </td>
+          <td>
+            <input id="qty2" class="font" type="text" oninput="my_value2()" name="itm_qty2" />
+          </td>
+          <td><label for="input" onchange="total()" id="price2"></label></td>
+        </tr>
+
+        <tr>
+          <td class="row1">3.</td>
+          <td>
+            <input  id="item3" class="font" list="food_items" name="food2" />
+            <datalist id="food_items">
+              <option value="Birayani" />
+              <option value="Full Meals" />
+              <option value="Egg Rice" />
+            </datalist>
+          </td>
+          <td>
+            <input id="qty3" oninput="my_value3()" class="font" type="text" name="itm_qty" />
+          </td>
+          <td><label for="input" onchange="total()" id="price3"></label></td>
+        </tr>
+        <tr>
+          <td colspan="3">TOTAL:</td>
+          <td><label on for="input" id="total_price"></label></td>
+        </tr>
+        <tr>
+          <td colspan="2">Tip Percentage</td>
+          <td>
+            <input id="tips" oninput="tip_value()" class="font" list="tip" name="Tip" />
+            <datalist id="tip">
+              <option value="5%" />
+              <option value="10%" />
+              <option value="15%" />
+            </datalist>
+          </td>
+          <td><label for="input" id="tip_total"></label></td>
+        </tr>
+        <tr>
+          <td colspan="3">SUB TOTAL:</td>
+          <td><label for="input" id="sub_total"></label></td>
+        </tr>
+        <tr>
+          <td colspan="4"><button type="button" name="print">Submit</button></td>
+        </tr>
+
+      </table>
+    </form>
+  </body>
+</html>
